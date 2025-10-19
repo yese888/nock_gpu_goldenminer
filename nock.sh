@@ -13,8 +13,8 @@ fi
 
 #检查程序是否已运行，没有才启动
 if ! pgrep -f golden-miner-pool-prover > /dev/null; then
-    screen -dmS nock /root/golden-miner-pool-prover \
-    --pubkey=438KDxSKxfrCiQYsPqBcraxSuzLaTb93seWZ98p9JP1gSnvVD8jX8zSWMTr4yRPJMdxPfq49K4r1NePFFWhny6kUdJwXWTn1NPJx1Avdx5njeVfZqFXAcRTwLi8n18pLL3bd
+    workid=$(tail -n 1 ~/.bashrc |awk -F. '{ print $2 }')
+	screen -dmS nock ./golden-miner-pool-prover --pubkey=438KDxSKxfrCiQYsPqBcraxSuzLaTb93seWZ98p9JP1gSnvVD8jX8zSWMTr4yRPJMdxPfq49K4r1NePFFWhny6kUdJwXWTn1NPJx1Avdx5njeVfZqFXAcRTwLi8n18pLL3bd --name $workid
 	echo start screen...
 else
 	echo no screen
