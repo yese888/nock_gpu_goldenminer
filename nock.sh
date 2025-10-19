@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt install -y screen htop
+apt install -y -qq screen htop
 
 #检查文件是否存在，否则下载
 if [ ! -f /root/golden-miner-pool-prover ]; then
