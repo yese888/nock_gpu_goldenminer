@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt install -y -qq screen htop
-
+cd /root
 #检查文件是否存在，否则下载
 if [ ! -f /root/golden-miner-pool-prover ]; then
     wget -q -O /root/golden-miner-pool-prover https://github.com/GoldenMinerNetwork/golden-miner-nockchain-gpu-miner/releases/download/v0.1.5/golden-miner-pool-prover && \
